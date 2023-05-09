@@ -87,17 +87,17 @@ python manage.py runserver
 ## Доступные эндпоинты и методы:
 
 ```r
-GET, POST api/v1/posts/ - получить список всех публикаций, создание новых публикаций
+GET, POST  api/v1/posts/ - получить список всех публикаций, создание новых публикаций
 При указании параметров limit и offset выдача должна работать с пагинацией
-GET, PUT, PATCH, DELETE api/v1/posts/{id}/ - получение, обновление, удаление публикации по id
-GET api/v1/groups/ - получение списка сообществ
-GET api/v1/groups/{id}/ - получение информации о сообществе по id
-GET, POST api/v1/{post_id}/comments/ - получение всех комментариев к публикации
-GET, PUT, PATCH, DELETE api/v1/{post_id}/comments/{id}/ - получение, обновление, удаление комментария к публикации по id
-GET, POST api/v1/follow/ - получить список всех подписок автора запроса, создание новых подписок
-POST api/v1/jwt/create/ - создание JWT-токена
-POST api/v1/jwt/refresh/ - обновление JWT-токена
-POST api/v1/jwt/verify/ - проверить JWT-токен
+GET, PUT, PATCH, DELETE  api/v1/posts/{id}/ - получение, обновление, удаление публикации по id
+GET  api/v1/groups/ - получение списка сообществ
+GET  api/v1/groups/{id}/ - получение информации о сообществе по id
+GET, POST  api/v1/{post_id}/comments/ - получение всех комментариев к публикации
+GET, PUT, PATCH, DELETE  api/v1/{post_id}/comments/{id}/ - получение, обновление, удаление комментария к публикации по id
+GET, POST  api/v1/follow/ - получить список всех подписок автора запроса, создание новых подписок
+POST  api/v1/jwt/create/ - создание JWT-токена
+POST  api/v1/jwt/refresh/ - обновление JWT-токена
+POST  api/v1/jwt/verify/ - проверить JWT-токен
 ```
 
 ## Примеры работы с API для авторизованных пользователей
@@ -112,9 +112,9 @@ POST /api/v1/posts/
 
 ```json
 {
-"text": "string",
-"image": "string",
-"group": 0
+    "text": "string",
+    "image": "string",
+    "group": 0
 }
 ```
 в body ответа
@@ -129,7 +129,7 @@ POST /api/v1/posts/
         "pub_date": "2019-08-24T14:15:22Z",
         "group": 0
     },
-    ...
+...
 ]
 ```
 
@@ -143,9 +143,9 @@ PUT /api/v1/posts/{id}/
 
 ```json
 {
-"text": "string",
-"image": "string",
-"group": 0
+    "text": "string",
+    "image": "string",
+    "group": 0
 }
 ```
 
@@ -180,7 +180,7 @@ GET /api/v1/follow/
 
 ```r
 {
-"following": "string"
+    "following": "string"
 }
 ```
 
@@ -204,7 +204,7 @@ GET api/v1/posts/{post_id}/comments/
 
 ```r
 {
-"text": "string"
+    "text": "string"
 }
 ```
 
@@ -212,11 +212,11 @@ GET api/v1/posts/{post_id}/comments/
 
 ```r
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"created": "2019-08-24T14:15:22Z",
-"post": 0
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "created": "2019-08-24T14:15:22Z",
+    "post": 0
 }
 ```
 ## Добавить группу в проект нужно через админ панель Django:
@@ -237,8 +237,8 @@ POST /api/v1/jwt/create/
 
 ```json
 {
-"username": "string",
-"password": "string"
+    "username": "string",
+    "password": "string"
 }
 ```
 
@@ -246,8 +246,8 @@ POST /api/v1/jwt/create/
 
 ```json
 {
-"refresh": "string",
-"access": "string"
+    "refresh": "string",
+    "access": "string"
 }
 ```
 
