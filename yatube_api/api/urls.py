@@ -3,7 +3,6 @@ from rest_framework.routers import SimpleRouter
 
 from .views import CommentViewSet, GroupViewSet, PostViewSet, FollowViewSet
 
-
 router = SimpleRouter()
 
 router.register('posts', PostViewSet)
